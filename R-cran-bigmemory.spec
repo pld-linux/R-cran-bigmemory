@@ -1,12 +1,13 @@
 %define		fversion	%(echo %{version} |tr r -)
 %define		modulename	bigmemory
+%undefine	_debugsource_packages
 Summary:	Massive matrices creation, access and manipulation
 Name:		R-cran-%{modulename}
 Version:	4.4.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Databases
-Source0:	ftp://stat.ethz.ch/R-CRAN/src/contrib/%{modulename}_%{fversion}.tar.gz
+Source0:	https://cran.r-project.org/src/contrib/%{modulename}_%{fversion}.tar.gz
 # Source0-md5:	9c74dcd311aee5a0154cc7a893cb3dfc
 BuildRequires:	R >= 2.8.1
 Requires(post,postun):	R >= 2.8.1
